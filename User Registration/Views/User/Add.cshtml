@@ -1,0 +1,32 @@
+﻿@model User_Registration.Models.UserAddViewModel
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <h1>Add User</h1>
+    <form asp-controller="User" asp-action="Add" enctype="multipart/form-data">
+        <label>Name:</label>
+        <input asp-for="User.Name" />
+        <br />
+        <label>Surname:</label>
+        <input asp-for="User.Surname" />
+        <br />
+        <label>Age:</label>
+        <input asp-for="User.Age" />
+        <br />
+        <label>Upload Image</label>
+        <input class="imginput" type="file" asp-for="File">
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
